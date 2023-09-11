@@ -198,6 +198,7 @@ def download_pretrained_models():
 
         # Download hubert_base.pt to the base path
         hubert_url = "https://huggingface.co/team-lucid/hubert-base-korean/blob/main/fairseq_model.pt"
+        print(f"Downloading hubert_base.pt from {hubert_url}")
         hubert_filepath = os.path.join(base_path, "hubert_base.pt")
         subprocess.run(
             ["aria2c", "--console-log-level=error", "-c", "-x", "16", "-s", "16", "-k", "1M", hubert_url, "-d",
