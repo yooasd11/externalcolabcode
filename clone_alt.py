@@ -212,7 +212,8 @@ def download_pretrained_models():
                 pbar.update()
 
         # Download hubert_base.pt to the base path
-        hubert_url = base_url + "hubert_base.pt"
+        hubert_url = "https://huggingface.co/team-lucid/hubert-base-korean/blob/main/fairseq_model.pt"
+        print(f"Downloading hubert_base.pt from {hubert_url}")
         hubert_filepath = os.path.join(base_path, "hubert_base.pt")
         download_file(hubert_url, hubert_filepath)
         pbar.update()
